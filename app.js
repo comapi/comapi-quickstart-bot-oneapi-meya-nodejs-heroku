@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // Register routes
-var index = require('./routes/webhook'); // Bring in the webhook route
+var index = require('./routes/botAdaptor'); // Bring in the webhook route
 
 var app = express();
 
