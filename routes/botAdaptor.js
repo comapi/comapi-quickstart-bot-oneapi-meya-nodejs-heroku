@@ -241,15 +241,21 @@ router.post("/botOutbound", function (req, res, next) {
       }
 
       // Is it a "card" type event from the bot, yes so it is a media message.
-      if (event.type == "card" && event.card.type == "image") {
-        // Attach as multi part message
-        let mimeType = mimeTypes.lookup(event.card.image_url);
+      if (event.type == "card") {
+        if (event.card.type == "image") {
+          // Attach as multi part message
+          let mimeType = mimeTypes.lookup(event.card.image_url);
 
-        myRequest.messageParts = [{
-          name: event.text,
-          type: mimeType,
-          url: event.card.image_url
-        }];
+          myRequest.messageParts = [{
+            name: event.text,
+            type: mimeType,
+            url: event.card.image_url
+          }];
+        } else {
+          // Unsupported card type
+          console.log("Unsupported Meya card type, so ignoring: " + event.card.type);
+          res.status(200).send("Unsupported Meya card type, so ignoring: " + event.card.type);
+        }
       }
 
       // Add conversation id if present.
