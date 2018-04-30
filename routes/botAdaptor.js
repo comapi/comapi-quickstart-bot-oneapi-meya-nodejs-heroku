@@ -10,20 +10,16 @@ var stringify = require('json-stable-stringify');
 var mimeTypes = require("mime-types");
 
 // Enter your Meya webhook key here
-//const _meyaKey = "YOUR MEYA WEBHOOK KEY";
-const _meyaKey = "Gac7hdzahZYpIKLZQP5Yi1WbaJhrvmjv";
+const _meyaKey = "YOUR MEYA WEBHOOK KEY";
 
 // Enter your Comapi API Space Id here e.g. 11164198-3f3f-4993-ab8f-70680c1113b1
-//const _yourComapiAPISpaceId = "YOUR_API_SPACE_ID";
-const _yourComapiAPISpaceId = "c124cf6e-4352-4b26-a71a-c3032bea7a01";
+const _yourComapiAPISpaceId = "YOUR_API_SPACE_ID";
 
 // Enter your Comapi access token here
-//const _yourComapiAccessToken = "YOUR_ACCESS_TOKEN";
-const _yourComapiAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmZTY2MWEzOC01Yjk4LTQwODItODc5ZS05ZjVhMTJjYzFjODMiLCJpc3MiOiJodHRwczovL2FwaS5jb21hcGkuY29tL2FjY2Vzc3Rva2VucyIsImF1ZCI6Imh0dHBzOi8vYXBpLmNvbWFwaS5jb20iLCJhY2NvdW50SWQiOjM0NzI3LCJhcGlTcGFjZUlkIjoiYzEyNGNmNmUtNDM1Mi00YjI2LWE3MWEtYzMwMzJiZWE3YTAxIiwicGVybWlzc2lvbnMiOlsiY29udjpyYSIsImNvbnY6d2EiLCJjaGFuOnIiLCJmYjpzdGF0ZTp3YSIsIm1zZzphbnk6cyIsIm1zZzpyIiwicHJvZjpyYSIsInByb2Y6d2EiLCJhcGlzOnJvIl0sInN1YiI6ImZlNjYxYTM4LTViOTgtNDA4Mi04NzllLTlmNWExMmNjMWM4MyIsInByb2ZpbGVJZCI6IkFjbWUiLCJuYW1lIjoiQWxsIiwiaWF0IjoxNDkxODM1ODg3fQ.SQuOLNobU2h4tHOOBRwQcgrUffItiaqU1znkumrIn0A";
+const _yourComapiAccessToken = "YOUR_ACCESS_TOKEN";
 
 // Enter your Comapi webhook secret phrase
-//const _yourWebhookSecret = "YOUR COMAPI WEBHOOK SECRET";
-const _yourWebhookSecret = "A secret!";
+const _yourWebhookSecret = "YOUR COMAPI WEBHOOK SECRET";
 
 ///////////////////////////////////////
 // GETs to easily check the page exists
