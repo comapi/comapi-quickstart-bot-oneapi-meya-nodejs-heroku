@@ -255,6 +255,7 @@ router.post("/botOutbound", function (req, res, next) {
           // Unsupported card type
           console.log("Unsupported Meya card type, so ignoring: " + event.card.type);
           res.status(200).send("Unsupported Meya card type, so ignoring: " + event.card.type);
+          return;
         }
       }
 
@@ -301,12 +302,14 @@ router.post("/botOutbound", function (req, res, next) {
 
           // All good return a 200
           res.status(200).send();
+          return;
         }
       });
     } else {
       // Ignore event
       console.log("Not a outbound message from the bot, so ignoring!");
       res.status(200).send();
+      return;
     }
   } catch (err) {
     // An error occurred
