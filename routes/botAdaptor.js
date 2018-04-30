@@ -201,6 +201,7 @@ router.post("/botOutbound", function (req, res, next) {
     } else {
       // Validate the HMAC, ensure you has exposed the rawBody, see app.js for how to do this
       let fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
+      console.log("Calculated URL for HMAC: " + fullUrl);
       let contentToValidate = fullUrl + orderedJsonStringify(req.body);
       let hash = cryptoJS.HmacSHA1(contentToValidate, _meyaKey);
 
